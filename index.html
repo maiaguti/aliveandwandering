@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--Meta-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Maia Gutierrez">
+        <meta name="description" content="Not all who wander are lost. We'd love to be your home away from home. Find the perfect vacation rental for your next adventure, here.">
+        <meta name="keywords" content="vacation, vacation rental, short-term rental, california, idaho, beach rentals, home rentals, airbnb, travel, wanderlust, socal, vibe, unique, comfortable, clean">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Thasadith:wght@400;700&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+        
+
+        <!--Links and JS links-->
+        <link href="styles.css" rel="stylesheet">
+        <script src="script.js" defer></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css"> -->
+        
+        <!-- slideshow plugin begin-->
+        <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+        <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+        <!-- slideshow plugin end-->
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        
+
+        <title>Alive and Wandering - Vacation Rentals</title>
+    </head>
+    <body>
+        <a id="skip" href="#main-content"> Skip to Main Content</a>
+        <header>
+            <nav>
+                <h2 class="sr-only">Main Navigation</h2>
+                <ul>
+                    <li><a href="#reserve">reserve</a></li>
+                    <li><a href="#rentals">rentals</a></li>
+                    <li><a href="#questions">FAQ</a></li>
+                    <li><a href="#activities">activities</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </nav>
+            <section id="banner">
+                <h1>Alive & Wandering</h1>
+            </section>
+        </header>
+        <main id="main-content">
+            <section id="gallery">
+            <!-- Carousel by https://swiffyslider.com/ -->
+            <!-- Images of staged homes were licensed for free from Adobe Stock Photo -->
+            <h2>GALLERY</h2>
+            <p>A glipse into where you'll be staying...</p>
+            <div class="swiffy-slider">
+                <ul class="slider-container">
+                    <li><img src="sc1.png" alt="Living room in San Clemente rental."></li>
+                    <li><img src="sc2.png" alt="Lounge in San Clemente rental."></li>
+                    <li><img src="sc3.png" alt="Beach at sunset in San Clemente."></li>
+                    <li><img src="sc4.png" alt="Mountain top view over-looking marine fog layer in San Clemente."></li>
+                    <li><img src="ps1.png" alt="Living room in Palm Springs rental."></li>
+                    <li><img src="ps2.png" alt="Bedroom in Palm Springs rental."></li>
+                    <li><img src="ps3.png" alt="Mountain view in Palm Springs."></li>
+                    <li><img src="id1.png" alt="Living room in Coeur d'Alene rental."></li>
+                    <li><img src="id2.png" alt="Upatairs lounge/bedroom in Coeur d'Alene rental."></li>
+                    <li><img src="id3.png" alt="Dining room of Coeur d'Alene rental."></li>
+                </ul>
+            
+                <button type="button" class="slider-nav"></button>
+                <button type="button" class="slider-nav slider-nav-next"></button>
+            
+                <div class="slider-indicators">
+                    <button class="active"></button>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+            </section>
+
+            <section id="reserve">
+                <h2 class="sr-only">Booking Section</h2>
+                <section id="webStorage">
+                    <h2>RESERVATIONS</h2>
+                    <p>To begin booking your stay, please introduce yourself!</p>
+                    <!-- web storage -->
+                    <form>
+                        <label for="fName">What's your name?</label>
+                        <input type="text" name="fName" id="fName">
+                        <label for="email">What's your email address?</label>
+                        <input type="email" name="email" id="email">
+                        <fieldset>
+                            <legend>Select rental location:</legend>
+                            <input type="radio" name="locationPref" id="prefSanClemente" checked><label for="prefSanClemente">San Clemente</label>
+                            <input type="radio" name="locationPref" id="prefPalmSprings"><label for="prefPalmSprings">Palm Springs</label>
+                            <input type="radio" name="locationPref" id="prefIdaho"><label for="prefIdaho">Coeur d'Alene</label>
+                        </fieldset>
+                        <input type="submit" name="introSubmit" id="introSubmit" value="Submit">
+                        <p id="formMsg"></p>
+                    </form>
+    
+                </section>
+
+                <!-- jQuery Widget/Plugin -->
+                <section id="dates">
+                    <h3 class="sr-only">Date Picker</h3>
+                    <p>What are the dates you'd like to stay...</p>
+                    <div id="datepick">
+                        <label for="from">From</label>
+                        <input type="text" id="from" name="from">
+                        <label for="to">to</label>
+                        <input type="text" id="to" name="to">
+                        <input type="button" id="datesSubmit" value="Submit">
+                    </div>
+                    <p id="displayDate"></p>
+                </section>
+            </section>
+
+            <!-- Ajax / API -->
+            <section id="weather"> 
+               <h2>Weather</h2>
+               <p>We know weather can get you daydreaming... </p>
+               <button id="getWeatherSC" class="weatherButton">San Clemente</button>
+               <section id="showSCWeather" class="hidden"></section>
+               <button id="getWeatherPS" class="weatherButton">Palm Springs</button>
+               <section id="showPSWeather" class="hidden"></section>
+               <button id="getWeatherID" class="weatherButton">Coeur d'Alene</button>
+               <section id="showIDWeather" class="hidden"></section>
+            </section>
+
+        </main>
+        <footer>
+            <p>&copy; 2023 Maia Gutierrez <br> All rights reserved.</p>
+        </footer>
+    </body>
+</html>
